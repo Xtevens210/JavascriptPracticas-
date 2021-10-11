@@ -1,0 +1,419 @@
+JAVASCRIPT
+
+ENLACES DE DOCUMENTO JAVASCRIPT
+<script src="app.js"></script>
+
+__________________________________________________________________________________________________
+
+
+CONSOLA
+--console.log("Hola mundo");  |Sirve para sacar mensajes en consola.
+--console.error("Error 77"); |Sirve para sacar mensajes de error en consola.
+--console.table(nombreDeArreglo);
+
+
+__________________________________________________________________________________________________
+ESCRIBIR EN LA PAGINA
+--document.write("hola mundo"); |Sirve para poner algo en la pagina.
+
+--EJEMPLO:
+--document.write("<h1>Hola mundo</h1>");  |
+
+__________________________________________________________________________________________________
+TIPOS DE DATOS
+--"Hola mundo" 'hello world'|String
+--122442 | 1.22             |numero
+--True |False               |boleano
+--["jose","alan","manuela"] |array
+--{                         |Objeto
+    "usuario": "alex",      |
+    "edad":17,              |
+    "puntuacion_alta":22.8. |
+    "profesional":True      |
+}                           |
+typeof numero30;            |te dice el tipo de dato que esta guardado en esa variable.
+
+__________________________________________________________________________________________________
+
+VARIABLES
+
+Existen let o var |
+--var             |Sirve para crear una variable
+--let             |Sirve para guardar una variable tambn
+--const           |Sirve para guardar un valor que no se modificara nunca
+
+__________________________________________________________________________________________________
+
+COMPARACIONES
+
+>   |Mayor que
+<   |Menor que
+>=  |Mayor o igual que
+<=  |Menor o igual que
+!=  |Diferente de
+&&  |--Y--
+||  |--O--
+==  |Igual que
+=== |Igual que pero mas estricto
+
+__________________________________________________________________________________________________
+
+METODOS
+
+.length        |Sirve para medir la distancia de una variable.
+.search()      |Sirve para buscar en una cadena datos coincidenciales.
+.push()        |Sirve para agregar elementos a un array al final
+.pop()         |Sirve para eliminar el ultimo elemento
+.unshift()     |sirve para agregar al principio de la lista
+.shift()       |Sirve para eliminar al principio de la lista
+.splice(v,v)   |sirve para eliminar elementos de una lista con el primer "v" se ubica en la lista con el segundo "v" borra todo lo que este delante de esa posicion indicada.
+.includes()    |sirve para buscar un elemento en la lista y devuelve true o false.
+
+__________________________________________________________________________________________________
+
+ARRAYS
+
+[]             |sirve para crear un array
+.push()        |Sirve para agregar elementos a un array al final
+.pop()         |Sirve para eliminar el ultimo elemento
+.unshift()     |sirve para agregar al principio de la lista
+.shift()       |Sirve para eliminar al principio de la lista
+.splice(v,v)   |sirve para eliminar elementos de una lista con el primer "v" se ubica en la lista con el segundo "v" borra todo lo que este delante de esa posicion indicada.
+.includes()    |sirve para buscar un elemento en la lista y devuelve true o false.
+var nombres = ["jose","alan","manuel"] |
+nombres[1]     |Sirve para mostrar el valor en ese lugar.
+.filter()      |Sirve para filtrar elementos de la lista.
+.sort()        |Sirve para ordenar los numeros usando el primer valor.
+.sort(a, b)    |Sirve para comparar valores y elegir cual va antes o despues.
+ejemplo .sort() numeros de tres cifras o mas...
+    array.sort((a ,b) => {
+    if (a < b){
+        return -1;
+    }                        Para ordenar un array asi var array = [1,2,100,3,5,6,544,234];
+                             Resultado esperado [1,2,3,5,6,100,234,544];
+    if (a > b){
+        return 1;
+    }
+});
+
+ejemplo.sort() objetos dentro de arrays en este caso nombres.
+const apellidoA = a.apellido.ToLowerCase();
+const apellidoB = b.apellido.ToLowerCase();
+array.sort((apellidoA ,apellidoB) => {
+    if (a < b){
+        return -1;
+    }                          const array = [{nombre: "J",apellido: "W"},
+                                              {nombre: "A",apellido: "C"},
+    if (a > b){                               {nombre: "C",apellido: "Z"},
+        return 1;                             {nombre: "W",apellido: "A"},
+    }                                         {nombre: "S",apellido: "Z"}]
+});
+
+
+__________________________________________________________________________________________________
+
+CONDICIONALES
+
+var puntuacion = 80;
+if (puntuacion < 50){                                          |Forma de construir el if en JS
+    console.log("Debes practicar un poco mas.");               |
+}else{console.log("Felicidades tienes un nivel destacable.")}  |
+-----
+var puntuacion = 12;                                           |Forma de construir un elif
+if (puntuacion > 80){                                          |
+    console.log("Eres una leyenda.");                          |
+}                                                              |
+else if(puntuacion >= 50 && puntuacion <= 80){                 |
+    console.log("Eres un jugador destacado.");                 |
+}                                                              |
+else{                                                          |
+    console.log("Desbes practicar un poco mas.");              |
+}
+-----
+var posicion = "delantero":                                    |Forma de construir in switch
+switch(posicion){                                              |
+    case "arquero":                                            |
+        console.log("PT");                                     |
+        break                                                  |
+    case "defensa":                                            |
+        console.log("DF");                                     |
+        break                                                  |
+    case "volante":                                            |
+        console.log("VOL");                                    |
+        break                                                  |
+    case "delantero":                                          |
+        console.log("DL");                                     |
+        break                                                  |
+}                                                              |
+
+__________________________________________________________________________________________________
+
+BUCLES
+
+var conteo = 50;                                               |Como hacer un ciclo while
+while(conteo > 0){                                             |
+    console.log(conteo);                                       |
+    conteo = conteo - 1;                                       |
+}                                                              |
+-----
+
+var nombres = ["andrea","paula","carolina","alejandra"]        |Ciclo FOR
+for(var i = 0; i < nombres.length; i++){                       |
+    console.log(i+1+" "+nombres[i]);                           |
+}
+
+__________________________________________________________________________________________________
+
+FUNCIONES
+
+function operar(num1 , num2) {                                             |Ejemplo de uso de la
+    var suma = num1 + num2;                                                |funcion.
+    var resta = num1 - num2;                                               |
+    var multiplicacion = num1 * num2;                                      |
+                                                                           |
+    return "suma "+suma+" resta "+resta+ " multiplicacion "+multiplicacion;|
+}                                                                          |
+                                                                           |
+var elNumero1 = 7;                                                         |
+var elNumero2 = 4;                                                         |
+                                                                           |
+console.log(operar(elNumero1,elNumero2));                                  |
+
+__________________________________________________________________________________________________
+
+OBJETOS
+
+var perro = {nombre:"rex", raza: "Pastor aleman", edad: 5, vivo:True}      |Creacion de objeto
+console.log(perro.nombre);                                                 |Llamado de un atributo del objeto.
+
+var persona = {
+    nombre: "Juan",
+    apellido: "Diaz",
+    telefono: [
+        {casa: 312847488},
+        {celular: 374748383848}
+        ]
+caminar:function(){
+    console.log(caminar....);
+    }
+}
+
+${this.}   ----                     |Se usa como palabra reservada para traer un  valor del objeto
+ejemplo
+console.log(El seññor ${this.nombre} de apellido ${this.diaz} con telefono ${this.telefono})
+
+
+CAMBIAR VALORES----
+
+persona.apellido = dias;
+
+CLASES-----
+
+class Peliculas{            |Forma de crear una clase en javascript.
+    contructor(nombre, id){
+        this.nombre = nombre;
+        this.id = id;
+    }
+}
+
+var peliculaUno = new Peliculas("Harry Potter", 1);       |Forma de instanciar un objeto.
+var peliculaDos = new Peliculas("Spiderman", 2);
+
+
+HERENCIA
+
+class Serie extends Peliculas{             |Hereda los atributos y metodos de la clase padre.
+constructor(nombre, id, capitulo){
+    super(nombre, id);
+    this.capitulo = capitulo;
+}
+reproducirCapitulo(){                      |METODO
+    }
+}
+
+var serieUno = new Serie("Good Doctor",3 ,55);
+
+
+PROTOYPES
+
+
+
+
+JSON
+
+Construccion del objeto JSON---
+{
+    contacto : [
+        {
+            "nombre" : "Ivan castro",
+            "edad" : 40,
+            "direccion" : "calle 63A #7"
+            "telefonos" :[
+                {"principal": 300316},
+                {"oficina": 2345533}
+            ],
+            "mascota":["canarios","perritos"]
+            "estadoCivil": true
+        },
+        {
+            "nombre" : "Catalina Yepes",
+            "edad" : 33,
+            "direccion" : "calle 64A #9"
+            "telefonos" :[
+                {"principal": 330346},
+                {"oficina": 2545533}
+            ],
+            "mascota":["conejos","gatos"]
+            "estadoCivil": false
+        }
+        ]
+}
+
+Conversion del objeto JSON-----
+
+var cadenaJSON = `{
+    contacto : [
+        {
+            "nombre" : "Ivan castro",
+            "edad" : 40,
+            "direccion" : "calle 63A #7"
+            "telefonos" :[
+                {"principal": 300316},
+                {"oficina": 2345533}
+            ],
+            "mascota":["canarios","perritos"]
+            "estadoCivil": true
+        },
+        {
+            "nombre" : "Catalina Yepes",
+            "edad" : 33,
+            "direccion" : "calle 64A #9"
+            "telefonos" :[
+                {"principal": 330346},
+                {"oficina": 2545533}
+            ],
+            "mascota":["conejos","gatos"]
+            "estadoCivil": false
+        }
+        ]
+}`;
+
+var personaJSON = JSON.parse(cadenaJSON);
+
+var cadena = JSON.stringify(personaJSON);
+
+DESTRUCTURING
+
+const Producto {
+    nombre: arroz,
+    precio: 1500,
+    disponible: true
+}
+
+const {nombre, precio ,disponible} = producto;    |Sirve para en una sola linea hacer un objeto.
+
+const {nombre, precio, disponibilidad, imagen.png} = producto;     |agregamos un nuevo objeto.
+delete producto.imagen;     |Borramos un atributo del objeto.
+
+
+__________________________________________________________________________________________________
+DOM
+
+document.querySelector(valor);                      |Sirve para elegir una etiqueta del HTML o DOM.
+document.querySelector("h1");                       |Ejemplo.
+.textContent(texto a cambiar en la etiqueta.);      |Sirve para modificar el texto de una etiqueta.
+.innerHTML = "<b>cambiando texto con etiqueta</b>"  |Sirve para agregar texto mas etiquetas.
+document.querySelector("h1").textContent("Titulo cambiado")  |Ejemplo----
+document.querySelector(".clase");                   |Sirve para seleccionar una clase.
+document.querySelector("#PorID");                   |Sirve para seleccionar por ID
+document.getElementById("PorID");                   |Segunda forma de invocar por ID
+document.querySelectorAll(valor);                   |Sirve para selecionar todos los elemenos de la misma etiqueta.
+document.querySelectorAll("h3");                    |Ejemplo----
+document.querySelector(valor)content;               |Sirve para obtener el valor dento de la etiqueta.
+
+Ejemplo estructural
+
+const parrafo = document.querySelector("#parrafo");
+parrafo.textContent = "Modificando el parrafo dentro de P";
+
+.classList.add("nombre de clase");                  |Sirve para añadir una clase a la etiqueta.
+.classList.add("parrafo, 2");                       |Ejemplo añadiendo clase mas otra.-----
+
+CREAR ELEMENTO
+
+document.createElement("etiqueta a crear");         |Sirve para crear etiquetas en el DOM.
+"id".appenChild(valor);                             |Sirve para añadir el elemento que creamos.
+document.createElement("h1");                       |EJEMPLO-----
+
+
+SINTAXIS
+
+const h1 = document.createElement("h1");
+h1.textContent = "Titulo de mi pagina";
+lista.appenChild("h1");
+
+
+FRAGMENTO
+
+document.createDocumentFragment()                  |Sirve para crear un fragmento.
+new document.fragment()                            |Ambas hacen lo mismo.
+
+SINTAXIS
+
+const h1 =document.querySelector("h1");
+const fragment = document.createDocumentFragment();
+                                                    |Sintaxis para disminuir el reflow
+const h1 = document.createElement(h1)
+h1.textContent = "Titulo principal";
+fragment.appenChild(h1);
+h1.appenChild(fragment);
+
+
+__________________________________________________________________________________________________
+
+EVENTOS Y CLICKS
+
+
+Event	Description
+onchange	Se ha cambiado un elemento HTML
+onclick	The el usuario hace clic en un elemento HTML
+onmouseover	El usuario mueve el mouse sobre un elemento HTML
+onmouseout	El usuario aleja el mouse de un elemento HTML
+onkeydown	El usuario empuja una tecla del teclado
+onload	    El navegador ha terminado de cargar la página.
+
+EJEMPLO-------
+
+<button onclick="displayDate()">The time is?</button>    |Se crea la etiqueta boton con el evento de onclick
+
+<script>
+function displayDate() {                                 |Se crea la funcion que esta asociada a onclick
+  document.getElementById("demo").innerHTML = Date();    |Se crea un DOM que se va a usar en la etiqueta p de id demo
+}                                                        |y se agrega con innerHTML al                                                       | date que pone la fecha fecha
+</script>
+
+<p id="demo"></p>
+
+FORMA CORRECTA --- con el click
+
+<button id="accion"></button>
+const variable = document.getElementById("accion");
+
+variable.onclick = displayDate;
+
+
+---
+
+FORMA DE DEFINIR MAS EVENTOS EN EL CLICKS
+
+variable.addEventListener("click",displayDate)
+
+
+Resumen Forma Correcta-----------------
+
+EVENTOS
+
+let variable = document.getElementById("nombre de etiqueta en html");
+
+variable.addEventListener('tipo de evento',nombre de funcion a llamar);
+
